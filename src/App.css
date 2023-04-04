@@ -3,28 +3,98 @@
 .nav__nav {
   background-color: #00549a;
   color: #FFF;
-}
-
-.nav__logo {
-  color: #FFF;
-  font-size: 3rem;
-  letter-spacing: -0.20rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav__div1 {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   width: 50%;
-  vertical-align: middle;
+  align-items: center;
+  position: relative;
+  
+}
+
+.nav__logo {
+  color: #FFF;
+  font-size: 3rem;
+  letter-spacing: -0.23rem;
+  margin-right: 2rem;
+  white-space: nowrap;
 }
 
 .nav__link {
   color: #C2CEDF;
   font-size: 2rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  font-weight: 300;
 }
 
 .nav__link:active,
 .nav__link:hover {
   color: #FFF;
+  text-decoration: none;
 }
+
+.nav__div2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.nav__form {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.nav__form-input {
+  border-radius: 20px;
+  padding: 0.25rem;
+  width: 13rem;
+  vertical-align: center;
+}
+
+.nav__form-search {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  right: 0.1rem;
+  top: 8px;
+  color: #00549a;
+}
+
+.nav__form-microphone {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  right: 1.3rem;
+  top: 8px;
+  color: #00549a;
+}
+
+.nav__login {
+  border-radius: 20px;
+  background-color: transparent;
+  color: #FFF;
+  border: 3px solid #FFF;
+  margin-left: 1rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.nav__login:hover {
+  filter: brightness(3);
+}
+
+.nav__cart {
+  margin-left: 1rem;
+  font-size: 2rem;
+}
+/* Location Section */
