@@ -1,3 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Topbar section */
+
+.topbar {
+  display: flex;
+  justify-content: center;
+  background-color: #2d2e33;
+  align-items: center;
+}
+
+.topbar__left,
+.topbar__right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topbar__left {
+  margin-right: 40%;
+}
+
+.topbar__p {
+  position: relative;
+  top: 5px;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.topbar__p a {
+  color: #babec2;
+}
+
 /* Nav Section */
 
 .nav__nav {
@@ -7,6 +44,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  height: 5rem;
 }
 
 .nav__div1 {
@@ -54,17 +92,19 @@
 
 .nav__form-input {
   border-radius: 20px;
-  padding: 0.25rem;
-  width: 13rem;
+  width: 15rem;
+  height: 2.5rem;
   vertical-align: center;
+  text-indent: 5%;
+  border: none;
 }
 
 .nav__form-search {
   border: none;
   background-color: transparent;
   position: absolute;
+  font-size: 1.2rem;
   right: 0.1rem;
-  top: 8px;
   color: #00549a;
 }
 
@@ -73,7 +113,8 @@
   background-color: transparent;
   position: absolute;
   right: 1.3rem;
-  top: 8px;
+  font-size: 1.2rem;
+  margin: 1rem;
   color: #00549a;
 }
 
@@ -97,4 +138,64 @@
   margin-left: 1rem;
   font-size: 2rem;
 }
+
 /* Location Section */
+
+.location {
+  height: 5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+}
+
+.location__left {
+  margin-left: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.location__div {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+}
+
+.location__region {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  color: #2d2e33;
+}
+
+.location__current {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-right: 4rem;
+}
+
+.location__change {
+  color: #00549a;
+  text-decoration: underline;
+  margin-right: 1rem;
+}
+
+.location__arrow {
+  font-weight: 800;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: #00549a;
+}
+
+.location__right {
+  margin-right: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.location__right span {
+  font-size: 2rem;
+  font-weight: lighter;
+  color: #babec2;
+}
