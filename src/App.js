@@ -2,6 +2,9 @@ import './App.css';
 import Navbar from './components/navbar/Navbar';
 import Topbar from './components/topbar/Topbar';
 import LocationBanner from './components/LocationBanner/LocationBanner';
+import ImageSlider from './components/ImageSlider/ImageSlider';
+
+import { data } from './data/phoneData';
 
 function App() {
   return (
@@ -11,6 +14,9 @@ function App() {
         <Navbar />
         <LocationBanner />
       </header>
+      <main>
+        <ImageSlider images={data.headerImgs} />
+      </main>
     </div>
   );
 }

@@ -104,18 +104,20 @@
   background-color: transparent;
   position: absolute;
   font-size: 1.2rem;
-  right: 0.1rem;
+  right: 0.5rem;
   color: #00549a;
+  cursor: pointer;
 }
 
 .nav__form-microphone {
   border: none;
   background-color: transparent;
   position: absolute;
-  right: 1.3rem;
+  right: 1.2rem;
   font-size: 1.2rem;
   margin: 1rem;
   color: #00549a;
+  cursor: pointer;
 }
 
 .nav__login {
@@ -128,6 +130,7 @@
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  cursor: pointer;
 }
 
 .nav__login:hover {
@@ -137,6 +140,7 @@
 .nav__cart {
   margin-left: 1rem;
   font-size: 2rem;
+  cursor: pointer;
 }
 
 /* Location Section */
@@ -184,6 +188,7 @@
   font-size: 1.25rem;
   text-decoration: none;
   color: #00549a;
+  cursor: pointer;
 }
 
 .location__right {
@@ -198,4 +203,5 @@
   font-size: 2rem;
   font-weight: lighter;
   color: #babec2;
+  cursor: pointer;
 }
