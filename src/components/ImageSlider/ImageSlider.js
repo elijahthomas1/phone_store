@@ -7,8 +7,8 @@ const ImageSlider = ({images}) => {
   return (
     <div className='slider'>
       {images.map((image,index) => {
-        return (<div className=''>
-                  <img className='' src={image.image} alt={image.title} />
+        return (<div className={index === 0 ? 'slider__div img_active' : 'slider__div img_inactive'}>
+                  <img className='slider__img' src={image.image} alt={image.title} />
                   <div>
                     
                   </div>
