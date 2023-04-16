@@ -208,21 +208,21 @@
 
 /* image slider */
 
-.main {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+main {
+  margin: 0 auto;
 }
+
 .slider {
-  width: 100%;
+  width: fit-content;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 15%;
+  margin: 0 auto;
 }
 
 .img_active {
-  visibility: visible;;
+  visibility: visible;
 }
 
 .img_inactive {
@@ -236,4 +236,8 @@
 
 .slider__text {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1rem;
+  text-align: center;
 }
