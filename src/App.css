@@ -221,6 +221,7 @@ main {
   justify-content: center;
   margin: 1rem auto;
   position: relative;
+  background-color: rgb(255, 255, 255);
 }
 
 .img_active {
@@ -249,4 +250,16 @@ main {
   justify-content: center;
   margin-left: 1rem;
   text-align: center;
+}
+
+.slider__text-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.slider__text-button {
+  background-color: #00549a;
+  border-radius: 25px;
+  font-size: 1.5rem;
+  padding: 0.25rem 0.75rem;
 }
