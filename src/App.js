@@ -14,9 +14,7 @@ function App() {
         <Navbar />
         <LocationBanner />
       </header>
-      <main>
-        <ImageSlider images={data.headerImgs} />
-      </main>
+      <ImageSlider images={data.headerImgs} />
     </div>
   );
 }
