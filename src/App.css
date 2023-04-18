@@ -267,3 +267,14 @@ main {
   font-size: 1rem;
   padding: 0.25rem;
 }
+
+.slider__right,
+.slider__left {
+  position: absolute;
+  font-size: 3rem;
+  padding: 1rem;
+  background-color: grey;
+  z-index: 1;
+  top: 50%;
+  transform: translate(0, -50%);
+}

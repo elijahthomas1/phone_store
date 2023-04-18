@@ -8,6 +8,10 @@ const ImageSlider = ({images}) => {
     timeStop = setTimeout(() => {
       rightImage()
     }, 3000)
+
+    return () => {
+      clearTimeout(timeStop)
+    }
   });
 
   const rightImage = () => {
@@ -28,6 +32,8 @@ const ImageSlider = ({images}) => {
                 </div>
         )
       })}
+      <div className='slider__left'>&lsaquo;</div>
+      <div className='slider__right'>&rsaquo;</div>
     </div>  
   )
 }
