@@ -7,7 +7,7 @@ const ImageSlider = ({images}) => {
   useEffect(() => {
     timeStop = setTimeout(() => {
       rightImage()
-    }, 3000)
+    }, 5000)
 
     return () => {
       clearTimeout(timeStop)
@@ -18,11 +18,15 @@ const ImageSlider = ({images}) => {
     setCurIndex(curIndex === images.length - 1 ? 0 : curIndex + 1)
   };
 
+  const leftImage = () => {
+    setCurIndex(curIndex === 0 ? images.length - 1 : curIndex - 1)
+  };
+
 
   return (
     <div className='slider'>
       {images.map((image,index) => {
-        return (<div className={index === curIndex ? 'slider__div img_active' : 'slider__div img_inactive'}>
+        return (<div key={index} className={index === curIndex ? 'slider__div img_active' : 'slider__div img_inactive'}>
                   <img className='slider__img' src={image.image} alt={image.title} />
                   <div className='slider__text'>
                     <h3 className='slider__text-title'>{image.title}</h3>
@@ -32,8 +36,10 @@ const ImageSlider = ({images}) => {
                 </div>
         )
       })}
-      <div className='slider__left'>&lsaquo;</div>
-      <div className='slider__right'>&rsaquo;</div>
+      <div className='slider__button-container'>
+        <div className='slider__left' onClick={leftImage}><p>&lsaquo;</p></div>
+        <div className='slider__right' onClick={rightImage}><p>&rsaquo;</p></div>
+      </div>
     </div>  
   )
 }
