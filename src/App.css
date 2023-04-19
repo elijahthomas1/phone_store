@@ -311,3 +311,45 @@ main {
 .slider__right p {
   padding-left: 3px;
 }
+
+.slider__pillbox {
+  display: flex;
+  width: 4rem;
+  height: 3rem;
+  padding: 0.5rem 3rem;
+  border-radius: 38px;
+  z-index: 1;
+  position: absolute;
+  right: 20%;
+  top: 85%;
+  background-color: #fff;
+  color: #000;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.slider__pillbox-1,
+.slider__pillbox-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0.5rem;
+  width: 0.5rem;
+  padding: 1.30rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+
+.slider__pillbox-2 {
+  position: relative;
+  margin-left: 0.75rem;
+}
+
+.slider__pillbox-selected {
+  background-color: #00549a;
+  color: #FFF;
+}

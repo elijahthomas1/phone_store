@@ -36,10 +36,15 @@ const ImageSlider = ({images}) => {
                 </div>
         )
       })}
+      <div className='slider__pillbox'>
+        <div className={curIndex === 0 ? 'slider__pillbox-1 slider__pillbox-selected' : 'slider__pillbox-1'}>1</div>
+        <div className={curIndex === 1 ? 'slider__pillbox-2 slider__pillbox-selected' : 'slider__pillbox-2'}>2</div>
+      </div>
       <div className='slider__button-container'>
         <div className='slider__left' onClick={leftImage}><p>&lsaquo;</p></div>
         <div className='slider__right' onClick={rightImage}><p>&rsaquo;</p></div>
       </div>
+
     </div>  
   )
 }
