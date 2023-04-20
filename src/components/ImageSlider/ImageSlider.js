@@ -3,11 +3,13 @@ import React, { useEffect, useState } from 'react';
 const ImageSlider = ({images}) => {
   const [curIndex, setCurIndex] = useState(0);
   let timeStop = null;
+  const [pauseIcon, setPauseIcon] = useState(true);
+  const [timeKeeper, setTimeKeeper] = useState(false);
 
   useEffect(() => {
     timeStop = setTimeout(() => {
       rightImage()
-    }, 5000)
+    }, 3000)
 
     return () => {
       clearTimeout(timeStop)
@@ -28,6 +30,7 @@ const ImageSlider = ({images}) => {
 
   const clearCounter = () => {
     clearTimeout(timeStop)
+    setPauseIcon(!pauseIcon);
   }
 
 
@@ -49,7 +52,7 @@ const ImageSlider = ({images}) => {
         <div onClick={() => setIndex(1)} className={curIndex === 1 ? 'slider__pillbox-2 slider__pillbox-selected' : 'slider__pillbox-2'}>2</div>
       </div>
       <div onClick={() => clearCounter()} className='slider__pause'>
-        <div className='slider__pause-icon'>&#8214;</div>
+        <div className='slider__pause-icon'>{pauseIcon ? <p>&#8214;</p> : <p>&#9658;</p>}</div>
       </div>
       {/* <div className='slider__button-container'>
         <div className='slider__left' onClick={leftImage}><p>&lsaquo;</p></div>
