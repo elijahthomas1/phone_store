@@ -20,10 +20,6 @@ const ImageSlider = ({images}) => {
     setCurIndex(curIndex === images.length - 1 ? 0 : curIndex + 1)
   };
 
-  const leftImage = () => {
-    setCurIndex(curIndex === 0 ? images.length - 1 : curIndex - 1)
-  };
-
   const setIndex = (newindex) => {
     setCurIndex(newindex);
   };
@@ -32,7 +28,6 @@ const ImageSlider = ({images}) => {
     clearTimeout(timeStop)
     setPauseIcon(!pauseIcon);
   }
-
 
   return (
     <div className='slider'>
