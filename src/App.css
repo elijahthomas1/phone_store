@@ -367,7 +367,13 @@ main {
   position: absolute;
   right: 17%;
   top: 85%;
-  font-size: 1rem;
+  font-size: 1.75rem;
   font-weight: bold;
   cursor: pointer;
+}
+
+.slider__pause-icon {
+  position: relative;
+  right: -7%;
+  top: 25%;
 }
