@@ -5,11 +5,12 @@ const ImageSlider = ({images}) => {
   let timeStop = null;
   const [pauseIcon, setPauseIcon] = useState(true);
   const [timeKeeper, setTimeKeeper] = useState(true);
+  const [countdown, setCountdown ] = useState(3000);
 
   useEffect(() => {
     timeStop = timeKeeper && setTimeout(() => {
       rightImage()
-    }, 3000)
+    }, countdown)
 
     return () => {
       clearTimeout(timeStop)
