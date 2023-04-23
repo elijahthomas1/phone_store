@@ -1,19 +1,24 @@
 import React, { useEffect, useState } from 'react';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 
 const ImageSlider = ({images}) => {
   const [curIndex, setCurIndex] = useState(0);
-  let timeStop = null;
   const [pauseIcon, setPauseIcon] = useState(true);
   const [timeKeeper, setTimeKeeper] = useState(true);
   const [countdown, setCountdown ] = useState(3000);
 
   useEffect(() => {
-    timeStop = timeKeeper && setTimeout(() => {
+    let timeStop = timeKeeper && setTimeout(() => {
       rightImage()
     }, countdown)
 
+    // let timeCounter = setInterval(subtractTime, 100);
+
     return () => {
       clearTimeout(timeStop)
+      // clearInterval(timeCounter)
+      setCountdown(3000);
     }
   });
 
@@ -28,6 +33,12 @@ const ImageSlider = ({images}) => {
   const clearCounter = () => {
     setTimeKeeper(!timeKeeper);
     setPauseIcon(!pauseIcon);
+  }
+
+  // not currently working
+  const subtractTime = () => {
+    setCountdown(() => countdown - 100)
+    console.log('time subtracted: ' + countdown)
   }
 
   return (
@@ -48,6 +59,7 @@ const ImageSlider = ({images}) => {
         <div onClick={() => setIndex(1)} className={curIndex === 1 ? 'slider__pillbox-2 slider__pillbox-selected' : 'slider__pillbox-2'}>2</div>
       </div>
       <div onClick={() => clearCounter()} className='slider__pause'>
+        <CircularProgressbar value={countdown} maxValue={3000} minValue={0} />
         {pauseIcon ? <p className='slider__pause-icon'>&#8214;</p> : <p className='slider__pause-icon'>&#9658;</p>}
       </div>
       {/* <div className='slider__button-container'>

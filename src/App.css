@@ -343,7 +343,6 @@ main {
   font-weight: bold;
 }
 
-
 .slider__pillbox-2 {
   position: relative;
   margin-left: 0.75rem;
@@ -373,5 +372,6 @@ main {
   align-items: center;
   justify-content: center;
   position: relative;
-  top: 5%;
+  top: -90%;
+  z-index: 2;
 }
