@@ -6,19 +6,19 @@ const ImageSlider = ({images}) => {
   const [curIndex, setCurIndex] = useState(0);
   const [pauseIcon, setPauseIcon] = useState(true);
   const [timeKeeper, setTimeKeeper] = useState(true);
-  const [countdown, setCountdown ] = useState(3000);
+  const [countdown, setCountdown ] = useState(100);
 
   useEffect(() => {
     let timeStop = timeKeeper && setTimeout(() => {
       rightImage()
-    }, countdown)
+    }, countdown * 300)
 
     // let timeCounter = setInterval(subtractTime, 100);
 
     return () => {
       clearTimeout(timeStop)
       // clearInterval(timeCounter)
-      setCountdown(3000);
+      setCountdown(100);
     }
   });
 
@@ -59,7 +59,7 @@ const ImageSlider = ({images}) => {
         <div onClick={() => setIndex(1)} className={curIndex === 1 ? 'slider__pillbox-2 slider__pillbox-selected' : 'slider__pillbox-2'}>2</div>
       </div>
       <div onClick={() => clearCounter()} className='slider__pause'>
-        <CircularProgressbar value={countdown} maxValue={3000} minValue={0} />
+        <CircularProgressbar value={countdown} />
         {pauseIcon ? <p className='slider__pause-icon'>&#8214;</p> : <p className='slider__pause-icon'>&#9658;</p>}
       </div>
       {/* <div className='slider__button-container'>
