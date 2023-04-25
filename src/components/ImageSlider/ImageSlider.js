@@ -11,7 +11,7 @@ const ImageSlider = ({images}) => {
   useEffect(() => {
     let timeStop = timeKeeper && setTimeout(() => {
       rightImage()
-    }, countdown * 300)
+    }, countdown * 30)
 
     // let timeCounter = setInterval(subtractTime, 100);
 
@@ -19,6 +19,7 @@ const ImageSlider = ({images}) => {
       clearTimeout(timeStop)
       // clearInterval(timeCounter)
       setCountdown(100);
+      console.log("reload occured")
     }
   });
 
@@ -59,7 +60,7 @@ const ImageSlider = ({images}) => {
         <div onClick={() => setIndex(1)} className={curIndex === 1 ? 'slider__pillbox-2 slider__pillbox-selected' : 'slider__pillbox-2'}>2</div>
       </div>
       <div onClick={() => clearCounter()} className='slider__pause'>
-        <CircularProgressbar value={countdown} />
+        <CircularProgressbar value={countdown} maxValue={100} minValue={0}/>
         {pauseIcon ? <p className='slider__pause-icon'>&#8214;</p> : <p className='slider__pause-icon'>&#9658;</p>}
       </div>
       {/* <div className='slider__button-container'>
