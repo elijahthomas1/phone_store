@@ -11,14 +11,22 @@ const ImageSlider = ({images}) => {
   useEffect(() => {
     let timeStop = timeKeeper && setTimeout(() => {
       rightImage()
-    }, countdown * 30)
-
+      // let thetimer = setTimeout(() => {
+      //   subtractTime
+      // }, 1)
+    }, 3000)
+    // let timer = timeKeeper && setInterval(() => {
+    //   increaseCountdown()
+    //   console.log(countdown)
+    // }, 100)
     // let timeCounter = setInterval(subtractTime, 100);
 
     return () => {
       clearTimeout(timeStop)
+      // clearInterval(timer);
+      // clearTimeout(thetimer)
       // clearInterval(timeCounter)
-      setCountdown(100);
+      setCountdown(0);
       console.log("reload occured")
     }
   });
@@ -26,6 +34,10 @@ const ImageSlider = ({images}) => {
   const rightImage = () => {
     setCurIndex(curIndex === images.length - 1 ? 0 : curIndex + 1)
   };
+
+  const increaseCountdown = () => {
+    setCountdown(countdown - 3);
+  }
 
   const setIndex = (newindex) => {
     setCurIndex(newindex);
@@ -37,10 +49,10 @@ const ImageSlider = ({images}) => {
   }
 
   // not currently working
-  const subtractTime = () => {
-    setCountdown(() => countdown - 100)
-    console.log('time subtracted: ' + countdown)
-  }
+  // const subtractTime = () => {
+  //   setCountdown(() => countdown - 1)
+  //   console.log('time subtracted: ' + countdown)
+  // }
 
   return (
     <div className='slider'>
@@ -60,7 +72,7 @@ const ImageSlider = ({images}) => {
         <div onClick={() => setIndex(1)} className={curIndex === 1 ? 'slider__pillbox-2 slider__pillbox-selected' : 'slider__pillbox-2'}>2</div>
       </div>
       <div onClick={() => clearCounter()} className='slider__pause'>
-        <CircularProgressbar value={countdown} maxValue={100} minValue={0}/>
+        <CircularProgressbar value={countdown} minValue={0} maxValue={100}/>
         {pauseIcon ? <p className='slider__pause-icon'>&#8214;</p> : <p className='slider__pause-icon'>&#9658;</p>}
       </div>
       {/* <div className='slider__button-container'>
