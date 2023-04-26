@@ -21,6 +21,8 @@ const ImageSlider = ({images}) => {
     // }, 100)
     // let timeCounter = setInterval(subtractTime, 100);
 
+
+
     return () => {
       clearTimeout(timeStop)
       // clearInterval(timer);
@@ -72,7 +74,7 @@ const ImageSlider = ({images}) => {
         <div onClick={() => setIndex(1)} className={curIndex === 1 ? 'slider__pillbox-2 slider__pillbox-selected' : 'slider__pillbox-2'}>2</div>
       </div>
       <div onClick={() => clearCounter()} className='slider__pause'>
-        <CircularProgressbar value={countdown} minValue={0} maxValue={100}/>
+        {/* <CircularProgressbar value={countdown} minValue={0} maxValue={100}/> */}
         {pauseIcon ? <p className='slider__pause-icon'>&#8214;</p> : <p className='slider__pause-icon'>&#9658;</p>}
       </div>
       {/* <div className='slider__button-container'>
