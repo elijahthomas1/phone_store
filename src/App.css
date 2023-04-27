@@ -358,7 +358,7 @@ main {
   height: 3rem;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 72px;
-  z-index: 1;
+  z-index: 2;
   position: absolute;
   right: 17%;
   top: 85%;
@@ -372,6 +372,17 @@ main {
   align-items: center;
   justify-content: center;
   position: relative;
-  top: -90%;
+  top: -210%;
+  left: -5%;
   z-index: 2;
+}
+
+.circle_animation {
+  z-index: -1;
+  position: relative;
+  top: -90%;
+}
+
+.circle_animation-circle {
+  z-index: 0;
 }
