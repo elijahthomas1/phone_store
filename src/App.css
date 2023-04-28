@@ -5,6 +5,10 @@
   font-family: 'Helvetica';
 }
 
+:root {
+  --circleSize: 40;
+}
+
 /* Topbar section */
 
 .topbar {
@@ -377,7 +381,7 @@ main {
   z-index: 2;
 }
 
-.circle_animation {
+/* .circle_animation {
   z-index: -1;
   position: relative;
   top: -90%;
@@ -385,4 +389,5 @@ main {
 
 .circle_animation-circle {
   z-index: 0;
-}
+} */
+

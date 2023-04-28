@@ -75,10 +75,10 @@ const ImageSlider = ({images}) => {
       </div>
       <div onClick={() => clearCounter()} className='slider__pause'>
         {/* <CircularProgressbar value={countdown} minValue={0} maxValue={100}/> */}
-        <svg className='circle_animation' width={100} height={100}>
-          <circle  className='circle_animation-circle' cx={50} cy={50} r={40} stroke='black' strokeWidth={3} fill='blue' />
+        {/* <svg className='circle_animation'>
+          <circle  className='circle_animation-circle' cx={20} cy={20} r={18} />
         </svg>
-        {pauseIcon ? <p className='slider__pause-icon'>&#8214;</p> : <p className='slider__pause-icon'>&#9658;</p>}
+        {pauseIcon ? <p className='slider__pause-icon'>&#8214;</p> : <p className='slider__pause-icon'>&#9658;</p>} */}
       </div>
       {/* <div className='slider__button-container'>
         <div className='slider__left' onClick={leftImage}><p>&lsaquo;</p></div>
