@@ -79,6 +79,10 @@ const ImageSlider = ({images}) => {
           <circle  className='circle_animation-circle' cx={20} cy={20} r={18} />
         </svg>
         {pauseIcon ? <p className='slider__pause-icon'>&#8214;</p> : <p className='slider__pause-icon'>&#9658;</p>} */}
+        <svg class="svg-indicator">
+          <circle class="svg-indicator-track"  cx={20} cy={20} r={30} />
+          <circle class="svg-indicator-indication"  cx={20} cy={20} r={38} />
+        </svg>
       </div>
       {/* <div className='slider__button-container'>
         <div className='slider__left' onClick={leftImage}><p>&lsaquo;</p></div>
