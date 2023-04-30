@@ -73,15 +73,17 @@ const ImageSlider = ({images}) => {
         <div onClick={() => setIndex(0)} className={curIndex === 0 ? 'slider__pillbox-1 slider__pillbox-selected' : 'slider__pillbox-1'}>1</div>
         <div onClick={() => setIndex(1)} className={curIndex === 1 ? 'slider__pillbox-2 slider__pillbox-selected' : 'slider__pillbox-2'}>2</div>
       </div>
-      <div onClick={() => clearCounter()} className='slider__pause'>
-        {/* <CircularProgressbar value={countdown} minValue={0} maxValue={100}/> */}
-        {/* <svg className='circle_animation'>
-          <circle  className='circle_animation-circle' cx={20} cy={20} r={18} />
-        </svg>
-        {pauseIcon ? <p className='slider__pause-icon'>&#8214;</p> : <p className='slider__pause-icon'>&#9658;</p>} */}
-        <svg class="svg-indicator">
-          <circle class="svg-indicator-track"  cx={20} cy={20} r={30} />
-          <circle class="svg-indicator-indication"  cx={20} cy={20} r={38} />
+      <div className='slider__container'>
+        <div onClick={() => clearCounter()} className='slider__pause'>
+          {/* <CircularProgressbar value={countdown} minValue={0} maxValue={100}/> */}
+          {/* <svg className='circle_animation'>
+            <circle  className='circle_animation-circle' cx={20} cy={20} r={18} />
+          </svg> */}
+          {pauseIcon ? <p className='slider__pause-icon'>&#8214;</p> : <p className='slider__pause-icon'>&#9658;</p>} 
+        </div>
+        <svg viewBox="25 -12 100 100" class="svg-indicator">
+          <circle class="svg-indicator-track" cx="50%" cy="50%" r={25} fill='none'  />
+          <circle class="svg-indicator-indication"  cx="50%" cy="50%" r={25} fill='none' />
         </svg>
       </div>
       {/* <div className='slider__button-container'>
