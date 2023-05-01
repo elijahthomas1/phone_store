@@ -81,9 +81,9 @@ const ImageSlider = ({images}) => {
           </svg> */}
           {pauseIcon ? <p className='slider__pause-icon'>&#8214;</p> : <p className='slider__pause-icon'>&#9658;</p>} 
         </div>
-        <svg viewBox="25 -12 100 100" class="svg-indicator">
-          <circle class="svg-indicator-track" cx="50%" cy="50%" r={25} fill='none'  />
-          <circle class="svg-indicator-indication"  cx="50%" cy="50%" r={25} fill='none' />
+        <svg viewBox="23 -20 100 100" class="svg-indicator">
+          <circle class="svg-indicator-track" cx="50%" cy="50%" r={20} fill='none'  />
+          <circle class="svg-indicator-indication"  cx="50%" cy="50%" r={20} fill='none' />
         </svg>
       </div>
       {/* <div className='slider__button-container'>
