@@ -11,23 +11,10 @@ const ImageSlider = ({images}) => {
   useEffect(() => {
     let timeStop = timeKeeper && setTimeout(() => {
       rightImage()
-      // let thetimer = setTimeout(() => {
-      //   subtractTime
-      // }, 1)
     }, 3000)
-    // let timer = timeKeeper && setInterval(() => {
-    //   increaseCountdown()
-    //   console.log(countdown)
-    // }, 100)
-    // let timeCounter = setInterval(subtractTime, 100);
-
-
 
     return () => {
       clearTimeout(timeStop)
-      // clearInterval(timer);
-      // clearTimeout(thetimer)
-      // clearInterval(timeCounter)
       setCountdown(0);
       console.log("reload occured")
     }
@@ -50,12 +37,6 @@ const ImageSlider = ({images}) => {
     setPauseIcon(!pauseIcon);
   }
 
-  // not currently working
-  // const subtractTime = () => {
-  //   setCountdown(() => countdown - 1)
-  //   console.log('time subtracted: ' + countdown)
-  // }
-
   return (
     <div className='slider'>
       {images.map((image,index) => {
@@ -75,10 +56,6 @@ const ImageSlider = ({images}) => {
       </div>
       <div className='slider__container'>
         <div onClick={() => clearCounter()} className='slider__pause'>
-          {/* <CircularProgressbar value={countdown} minValue={0} maxValue={100}/> */}
-          {/* <svg className='circle_animation'>
-            <circle  className='circle_animation-circle' cx={20} cy={20} r={18} />
-          </svg> */}
           {pauseIcon ? <p className='slider__pause-icon'>&#8214;</p> : <p className='slider__pause-icon'>&#9658;</p>} 
         </div>
         <svg viewBox="23 -20 100 100" class="svg-indicator">
@@ -86,11 +63,6 @@ const ImageSlider = ({images}) => {
           <circle class="svg-indicator-indication"  cx="50%" cy="50%" r={20} fill='none' />
         </svg>
       </div>
-      {/* <div className='slider__button-container'>
-        <div className='slider__left' onClick={leftImage}><p>&lsaquo;</p></div>
-        <div className='slider__right' onClick={rightImage}><p>&rsaquo;</p></div>
-      </div> */}
-
     </div>  
   )
 }
