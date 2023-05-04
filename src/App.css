@@ -391,16 +391,26 @@ main {
   z-index: 2;
   overflow: visible;
 }
-/* 
+
 .svg-indicator {
   z-index: 0;
   overflow: visible;
   height: 7rem;
   width: 7rem;
-} */
+}
 
 .svg-indicator-track,
 .svg-indicator-indication {
   stroke-width: 4px;
+  fill: transparent;
+}
+
+.svg-indicator-track {
+  stroke: #00549a;
+}
+
+.svg-indicator-indication {
   stroke: #003778;
+  stroke-dasharray: 20px;
+  stroke-dashoffset: 20px;
 }
