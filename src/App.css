@@ -406,11 +406,15 @@ main {
 }
 
 .svg-indicator-track {
-  stroke: #00549a;
+  stroke: yellow;
 }
 
 .svg-indicator-indication {
   stroke: #003778;
-  stroke-dasharray: 20px;
-  stroke-dashoffset: 20px;
+  stroke-dasharray: 0px;
+  stroke-dashoffset: 100px;
+}
+
+.svg-indicator-indication-0 {
+
 }
