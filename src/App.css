@@ -416,5 +416,5 @@ main {
 }
 
 .svg-indicator-indication-0 {
-
+  stroke-dasharray: 5px;
 }
