@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 const ImageSlider = ({images}) => {
@@ -24,9 +23,9 @@ const ImageSlider = ({images}) => {
     setCurIndex(curIndex === images.length - 1 ? 0 : curIndex + 1)
   };
 
-  const increaseCountdown = () => {
-    setCountdown(countdown - 3);
-  }
+  // const increaseCountdown = () => {
+  //   setCountdown(countdown - 3);
+  // }
 
   const setIndex = (newindex) => {
     setCurIndex(newindex);
