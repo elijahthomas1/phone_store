@@ -411,7 +411,7 @@ main {
 
 .svg-indicator-indication {
   stroke: #003778;
-  stroke-dasharray: 0px;
+  stroke-dasharray: 95px;
   stroke-dashoffset: 100px;
 }
 
