@@ -393,10 +393,14 @@ main {
 }
 
 .svg-indicator {
-  z-index: 0;
+  z-index: 3;
+  position: relative;
   overflow: visible;
+  right: 77%;
+  top: -5%;
   height: 7rem;
   width: 7rem;
+  transform: rotate(-90deg);
 }
 
 .svg-indicator-track,
@@ -411,8 +415,9 @@ main {
 
 .svg-indicator-indication {
   stroke: #003778;
-  stroke-dasharray: 95px;
-  stroke-dashoffset: 100px;
+  /* transform: rotate(-90deg); */
+  /* stroke-dasharray: 200px;
+  stroke-dashoffset: 60px; */
 }
 
 .svg-indicator-indication-0 {
@@ -420,7 +425,9 @@ main {
 }
 
 .svg-indicator-indication-5 {
-  stroke-dasharray: 5px;
+  stroke: #003778;
+  stroke-dasharray: 10px;
+  /* stroke-dashoffset: 5px; */
 }
 
 .svg-indicator-indication-10 {

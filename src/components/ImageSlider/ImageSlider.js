@@ -14,7 +14,7 @@ const ImageSlider = ({images}) => {
     }, 3000)
 
     let increasePercent = timeKeeper && setTimeout(() => {
-      
+
     }, 150)
 
     return () => {
@@ -68,8 +68,8 @@ const ImageSlider = ({images}) => {
           {pauseIcon ? <p className='slider__pause-icon'>&#8214;</p> : <p className='slider__pause-icon'>&#9658;</p>} 
         </div>
         <svg viewBox="23 -20 100 100" class="svg-indicator">
-          <circle class="svg-indicator-track" cx="50%" cy="50%" r={20} fill='none'  />
-          <circle class="svg-indicator-indication"  cx="50%" cy="50%" r={20} fill='none' />
+          {/* <circle class="svg-indicator-track" cx="50%" cy="50%" r={20} fill='none'  /> */}
+          <circle class="svg-indicator-indication svg-indicator-indication-5"  cx="50%" cy="50%" r={20} fill='none' />
         </svg>
       </div>
     </div>  
