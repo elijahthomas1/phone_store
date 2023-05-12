@@ -416,65 +416,85 @@ main {
 }
 
 .svg-indicator-indication-0 {
-  stroke-dasharray: 5px;
+  stroke-dasharray: 0px;
 }
+
 .svg-indicator-indication-5 {
   stroke-dasharray: 5px;
 }
+
 .svg-indicator-indication-10 {
-  stroke-dasharray: 5px;
+  stroke-dasharray: 10px;
 }
+
 .svg-indicator-indication-15 {
-  stroke-dasharray: 5px;
+  stroke-dasharray: 15px;
 }
+
 .svg-indicator-indication-20 {
-  stroke-dasharray: 5px;
+  stroke-dasharray: 20px;
 }
+
 .svg-indicator-indication-25 {
-  stroke-dasharray: 5px;
+  stroke-dasharray: 25px;
 }
+
 .svg-indicator-indication-30 {
-  stroke-dasharray: 5px;
+  stroke-dasharray: 30px;
 }
+
 .svg-indicator-indication-35 {
-  stroke-dasharray: 5px;
+  stroke-dasharray: 35px;
 }
+
 .svg-indicator-indication-40 {
-  stroke-dasharray: 5px;
+  stroke-dasharray: 40px;
 }
+
 .svg-indicator-indication-45 {
-  stroke-dasharray: 5px;
+  stroke-dasharray: 45px;
 }
+
 .svg-indicator-indication-50 {
   stroke-dasharray: 5px;
 }
+
 .svg-indicator-indication-55 {
   stroke-dasharray: 5px;
 }
+
 .svg-indicator-indication-60 {
   stroke-dasharray: 5px;
 }
+
 .svg-indicator-indication-65 {
   stroke-dasharray: 5px;
 }
+
 .svg-indicator-indication-70 {
   stroke-dasharray: 5px;
 }
+
 .svg-indicator-indication-75 {
   stroke-dasharray: 5px;
 }
+
 .svg-indicator-indication-80 {
   stroke-dasharray: 5px;
 }
+
 .svg-indicator-indication-85 {
   stroke-dasharray: 5px;
 }
+
 .svg-indicator-indication-90 {
   stroke-dasharray: 5px;
 }
+
 .svg-indicator-indication-95 {
   stroke-dasharray: 5px;
 }
+
 .svg-indicator-indication-100 {
   stroke-dasharray: 5px;
 }

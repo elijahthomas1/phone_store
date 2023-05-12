@@ -1,3 +1,4 @@
+import { clear } from '@testing-library/user-event/dist/clear';
 import React, { useEffect, useState } from 'react';
 import 'react-circular-progressbar/dist/styles.css';
 
@@ -12,8 +13,13 @@ const ImageSlider = ({images}) => {
       rightImage()
     }, 3000)
 
+    let increasePercent = timeKeeper && setTimeout(() => {
+      
+    }, 150)
+
     return () => {
       clearTimeout(timeStop)
+      clearTimeout(increasePercent)
       setCountdown(0);
       console.log("reload occured")
     }
@@ -22,6 +28,10 @@ const ImageSlider = ({images}) => {
   const rightImage = () => {
     setCurIndex(curIndex === images.length - 1 ? 0 : curIndex + 1)
   };
+
+  const percentIncrease = () => {
+
+  }
 
   // const increaseCountdown = () => {
   //   setCountdown(countdown - 3);
