@@ -427,7 +427,7 @@ main {
 .svg-indicator-indication-5 {
   stroke: #003778;
   stroke-dasharray: 10px;
-  /* stroke-dashoffset: 5px; */
+  stroke-dashoffset: 5px;
 }
 
 .svg-indicator-indication-10 {

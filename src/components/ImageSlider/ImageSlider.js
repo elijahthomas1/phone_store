@@ -20,6 +20,7 @@ const ImageSlider = ({images}) => {
     return () => {
       clearTimeout(timeStop)
       clearTimeout(increasePercent)
+      console.log(countdown)
       setCountdown(0);
       console.log("reload occured")
     }
