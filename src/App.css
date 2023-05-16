@@ -420,6 +420,8 @@ main {
   stroke-dashoffset: 60px; */
 }
 
+/* Offsets for indicator track */
+
 .svg-indicator-indication-0 {
   stroke-dasharray: 0px;
 }
