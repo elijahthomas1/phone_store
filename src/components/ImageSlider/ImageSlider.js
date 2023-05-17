@@ -6,7 +6,7 @@ const ImageSlider = ({images}) => {
   const [curIndex, setCurIndex] = useState(0);
   const [pauseIcon, setPauseIcon] = useState(true);
   const [timeKeeper, setTimeKeeper] = useState(true);
-  const [countdown, setCountdown ] = useState(100);
+  const [countdown, setCountdown ] = useState(0);
 
   useEffect(() => {
     let timeStop = timeKeeper && setTimeout(() => {
@@ -14,7 +14,7 @@ const ImageSlider = ({images}) => {
     }, 3000)
 
     let increasePercent = timeKeeper && setTimeout(() => {
-
+      increaseCountdown()
     }, 150)
 
     return () => {
@@ -34,9 +34,9 @@ const ImageSlider = ({images}) => {
 
   }
 
-  // const increaseCountdown = () => {
-  //   setCountdown(countdown - 3);
-  // }
+  const increaseCountdown = () => {
+    setCountdown(countdown - 3);
+  }
 
   const setIndex = (newindex) => {
     setCurIndex(newindex);
@@ -70,7 +70,9 @@ const ImageSlider = ({images}) => {
         </div>
         <svg viewBox="23 -20 100 100" class="svg-indicator">
           {/* <circle class="svg-indicator-track" cx="50%" cy="50%" r={20} fill='none'  /> */}
-          <circle class="svg-indicator-indication svg-indicator-indication-5"  cx="50%" cy="50%" r={20} fill='none' />
+          <circle class={
+            countdown < 50 ? "svg-indicator-indication svg-indicator-indication-5" : "svg-indicator-indication"
+          }  cx="50%" cy="50%" r={20} fill='none' />
         </svg>
       </div>
     </div>  
