@@ -422,7 +422,7 @@ main {
 
 /* Offsets for indicator track */
 
-/* .svg-indicator-indication-0 {
+.svg-indicator-indication-0 {
   stroke-dasharray: 0px;
 }
 
@@ -507,4 +507,3 @@ main {
 .svg-indicator-indication-100 {
   stroke-dasharray: 5px;
 }
- */
